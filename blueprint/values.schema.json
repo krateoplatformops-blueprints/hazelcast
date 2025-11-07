@@ -1,53 +1,45 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "additionalProperties": true,
+  "additionalProperties": false,
   "properties": {
-    "hazelcast": {
+    "cluster": {
       "additionalProperties": false,
-      "description": "Hazelcast in-memory data grid configuration",
+      "description": "list of Hazelcast clusters to create",
       "properties": {
-        "cluster": {
-          "additionalProperties": false,
-          "description": "list of Hazelcast clusters to create",
-          "properties": {
-            "name": {
-              "default": "hz-first",
-              "description": "Cluster name",
-              "title": "name",
-              "type": "string"
-            },
-            "size": {
-              "default": 1,
-              "description": "Number of members in the cluster",
-              "minimum": 1,
-              "title": "size",
-              "type": "integer"
-            }
-          },
-          "title": "cluster",
-          "type": "object"
-        },
-        "licenseKey": {
-          "default": "TrialLicense#10Nodes#eyJhbGxvd2VkTmF0aXZlTWVtb3J5U2l6ZSI6MTAwLCJhbGxvd2VkTnVtYmVyT2ZOb2RlcyI6MTAsImFsbG93ZWRUaWVyZWRTdG9yZVNpemUiOjAsImFsbG93ZWRUcGNDb3JlcyI6MCwiY3JlYXRpb25EYXRlIjoxNzYxODQ3ODcwLjYzNjUyOTU1OSwiZXhwaXJ5RGF0ZSI6MTc2NDM3NDM5OS45OTk5OTk5OTksImZlYXR1cmVzIjpbMCwyLDMsNCw1LDYsNyw4LDEwLDExLDEzLDE0LDE1LDE3LDIxLDIyXSwiZ3JhY2VQZXJpb2QiOjAsImhhemVsY2FzdFZlcnNpb24iOjk5LCJvZW0iOmZhbHNlLCJ0cmlhbCI6dHJ1ZSwidmVyc2lvbiI6IlY3In0=.7Wh2kBN9XyTR6J4rwj18vvrMvFk37ckhw21VmVfKJ9-sYAEscbMOj20SDn7tzXkBqsurfXYpb3Ke0dMBrA0qDQ==",
-          "description": "Hazelcast license key (leave empty if using Community)",
-          "title": "licenseKey",
+        "name": {
+          "default": "hz-first",
+          "description": "Cluster name",
+          "title": "name",
           "type": "string"
         },
-        "repository": {
-          "default": "docker.io/hazelcast/hazelcast",
-          "description": "Repository for Hazelcast image",
-          "title": "repository",
-          "type": "string"
-        },
-        "version": {
-          "default": "5.6.0",
-          "description": "Hazelcast image version/tag",
-          "title": "version",
-          "type": "string"
+        "size": {
+          "default": 1,
+          "description": "Number of members in the cluster",
+          "minimum": 1,
+          "title": "size",
+          "type": "integer"
         }
       },
-      "title": "hazelcast",
+      "title": "cluster",
       "type": "object"
+    },
+    "licenseKey": {
+      "default": "TrialLicense#10Nodes#eyJhbGxvd2VkTmF0aXZlTWVtb3J5U2l6ZSI6MTAwLCJhbGxvd2VkTnVtYmVyT2ZOb2RlcyI6MTAsImFsbG93ZWRUaWVyZWRTdG9yZVNpemUiOjAsImFsbG93ZWRUcGNDb3JlcyI6MCwiY3JlYXRpb25EYXRlIjoxNzYxODQ3ODcwLjYzNjUyOTU1OSwiZXhwaXJ5RGF0ZSI6MTc2NDM3NDM5OS45OTk5OTk5OTksImZlYXR1cmVzIjpbMCwyLDMsNCw1LDYsNyw4LDEwLDExLDEzLDE0LDE1LDE3LDIxLDIyXSwiZ3JhY2VQZXJpb2QiOjAsImhhemVsY2FzdFZlcnNpb24iOjk5LCJvZW0iOmZhbHNlLCJ0cmlhbCI6dHJ1ZSwidmVyc2lvbiI6IlY3In0=.7Wh2kBN9XyTR6J4rwj18vvrMvFk37ckhw21VmVfKJ9-sYAEscbMOj20SDn7tzXkBqsurfXYpb3Ke0dMBrA0qDQ==",
+      "description": "Hazelcast license key (leave empty if using Community)",
+      "title": "licenseKey",
+      "type": "string"
+    },
+    "repository": {
+      "default": "docker.io/hazelcast/hazelcast",
+      "description": "Repository for Hazelcast image",
+      "title": "repository",
+      "type": "string"
+    },
+    "version": {
+      "default": "5.6.0",
+      "description": "Hazelcast image version/tag",
+      "title": "version",
+      "type": "string"
     }
   },
   "type": "object"
