@@ -6,7 +6,7 @@ spec:
   clusterSize: {{ .Values.cluster.size }}
   clusterName: {{ .Values.cluster.name }}
   repository: {{ .Values.repository }}
-  version: {{ .Values.repository }}
+  version: {{ .Values.version }}
   licenseKeySecretName: {{ .Release.Name }}-license-key
 ---
 apiVersion: hazelcast.com/v1alpha1
